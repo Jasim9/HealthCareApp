@@ -234,19 +234,20 @@ containing a value of this type.
         public static final int pencil_on=0x7f020020;
     }
     public static final class id {
-        public static final int button1=0x7f07000e;
-        public static final int description=0x7f070007;
+        public static final int button1=0x7f07000f;
+        public static final int description=0x7f070008;
         public static final int description_content=0x7f070005;
         public static final int fullscreen_content=0x7f070006;
-        public static final int fullscreen_content_controls=0x7f070008;
+        public static final int fullscreen_content_controls=0x7f070009;
         public static final int hybrid=0x7f070004;
-        public static final int map=0x7f070009;
-        public static final int mapview=0x7f07000d;
+        public static final int imageView1=0x7f070007;
+        public static final int map=0x7f07000a;
+        public static final int mapview=0x7f07000e;
         public static final int none=0x7f070000;
         public static final int normal=0x7f070001;
-        public static final int radioButton1=0x7f07000b;
-        public static final int radioButton2=0x7f07000c;
-        public static final int radio_content=0x7f07000a;
+        public static final int radioButton1=0x7f07000c;
+        public static final int radioButton2=0x7f07000d;
+        public static final int radio_content=0x7f07000b;
         public static final int satellite=0x7f070002;
         public static final int terrain=0x7f070003;
     }

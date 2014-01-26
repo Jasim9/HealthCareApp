@@ -16,13 +16,19 @@
         <TextView
             android:id="@+id/fullscreen_content"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="113dp"
             android:gravity="center"
             android:keepScreenOn="true"
             android:text="@string/dummy_content"
             android:textColor="#eeeeff"
             android:textSize="44sp"
             android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:src="@drawable/logo" />
 
         <TextView
             android:id="@+id/description"
@@ -54,7 +60,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="@string/map"
-                android:textColor="#aabbee"
+                android:textColor="#FFFFFF"
                 android:textStyle="bold"
                  />
 
