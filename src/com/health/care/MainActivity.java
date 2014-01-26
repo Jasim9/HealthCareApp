@@ -1,9 +1,20 @@
 package com.health.care;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+
 import com.health.care.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.location.Location;
+import android.net.ParseException;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -114,8 +125,8 @@ public class MainActivity extends Activity {
 		// Upon interacting with UI controls, delay any scheduled hide()
 		// operations to prevent the jarring behavior of controls going away
 		// while interacting with the UI.
-		findViewById(R.id.dummy_button).setOnTouchListener(
-				mDelayHideTouchListener);
+//		findViewById(R.id.dummy_button).setOnTouchListener(
+//				mDelayHideTouchListener);
 	}
 
 	@Override
@@ -159,4 +170,40 @@ public class MainActivity extends Activity {
 		mHideHandler.removeCallbacks(mHideRunnable);
 		mHideHandler.postDelayed(mHideRunnable, delayMillis);
 	}
+	
+	public static ArrayList<Location> readCSV(String filename){
+		ArrayList<Location> locations=new ArrayList<Location>();
+		File file=new File(filename);
+		BufferedReader rdr=null;
+		try {
+			rdr = new BufferedReader(new FileReader(file));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String line=null;
+		
+		try {
+			while ((line=rdr.readLine())!=null){
+				String[] tokens=line.split(",");
+				Location loc=new Location("oneLoc");	// Assuming csv of format lat,long in every line
+				loc.setLatitude(Double.parseDouble(tokens[0]));
+				loc.setLongitude(Double.parseDouble(tokens[1]));
+				locations.add(loc);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		finally{
+			try {
+				rdr.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		return locations;
+	}
+	
 }

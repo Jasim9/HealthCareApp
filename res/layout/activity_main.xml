@@ -17,37 +17,54 @@
         android:textSize="50sp"
         android:textStyle="bold" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true" >
-
-        <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="?buttonBarStyle"
+    <LinearLayout
+            android:id="@+id/description_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical| center_horizontal"
-            android:background="@color/black_overlay"
-            android:orientation="vertical"
-            tools:ignore="UselessParent" >
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical" >
 
-            <Button
-                android:id="@+id/map"
-                style="?buttonBarButtonStyle"
-                android:layout_height="0dp"
+            <TextView
+                android:id="@+id/description"
                 android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:text="@string/map" />
-            <Button
-                android:id="@+id/heatMap"
-                style="?buttonBarButtonStyle"
-                android:layout_height="0dp"
+                android:layout_height="120dp"
+                android:gravity="center_horizontal"
+                android:keepScreenOn="true"
+                android:padding="10dp"
+                android:text="@string/description"
+                android:textAlignment="gravity"
+                android:textColor="#55b6e6"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/fullscreen_content_controls"
+                style="?buttonBarStyle"
                 android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:text="@string/hmap" />
-            
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="50dp"
+                android:background="@color/black_overlay"
+                android:orientation="vertical"
+                tools:ignore="UselessParent" >
+
+                <Button
+                    android:id="@+id/map"
+                    style="?buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/map" />
+
+                <Button
+                    android:id="@+id/heatMap"
+                    style="?buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/hmap" />
+            </LinearLayout>
         </LinearLayout>
-    </FrameLayout>
 
 </FrameLayout>
