@@ -21,8 +21,8 @@
             android:keepScreenOn="true"
             android:text="@string/dummy_content"
             android:textAlignment="center"
-            android:textColor="#44b8c5"
-            android:textSize="50sp"
+            android:textColor="#eeeeff"
+            android:textSize="44sp"
             android:textStyle="bold" />
 
         <TextView
@@ -45,8 +45,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginBottom="50dp"
+            android:background="@color/black_overlay"
             android:orientation="vertical"
-	        android:background="@color/black_overlay"
             tools:ignore="UselessParent" >
 
             <Button
@@ -55,19 +55,38 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-				android:textColor="#aabbee"
-				android:textStyle="bold"
-                android:text="@string/map" />
+                android:text="@string/map"
+                android:textColor="#aabbee"
+                android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/heatMap"
-                style="?buttonBarButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-				android:textColor="#aabbee"
-				android:textStyle="bold"
-                android:text="@string/hmap" />
+            <LinearLayout
+                android:id="@+id/radio_content"
+                style="?buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal" >
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:checkedButton="@+id/radioButton1">
+
+                    <RadioButton
+                        android:id="@id/radioButton1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/dengue" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/malaria" />
+                </RadioGroup>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 

@@ -5,6 +5,8 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="map">Map</string>
     <string name="hmap">Heat Map</string>
-    <string name="dummy_content">SMART\nCARE</string>
+    <string name="dengue">Dengue</string>
+    <string name="malaria">Malaria</string>
+    <string name="dummy_content">SMART CARE</string>
 	<string name="description">A smart way to keep yourself aware of infectious disease break-outs in your area so you can take measures to live a healthy life!</string>
 </resources>
