@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:background="#0099aa"
     tools:context=".MainActivity" >
 
     <TextView
@@ -13,7 +13,7 @@
         android:keepScreenOn="true"
         android:text="@string/dummy_content"
         android:textAlignment="viewStart"
-        android:textColor="#33b5e5"
+        android:textColor="#88bae8"
         android:textSize="50sp"
         android:textStyle="bold" />
 
@@ -28,13 +28,13 @@
             <TextView
                 android:id="@+id/description"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="140dp"
                 android:gravity="center_horizontal"
                 android:keepScreenOn="true"
-                android:padding="10dp"
+                android:padding="14dp"
                 android:text="@string/description"
                 android:textAlignment="gravity"
-                android:textColor="#55b6e6"
+                android:textColor="#66b8e6"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
