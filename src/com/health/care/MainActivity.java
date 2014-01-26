@@ -204,4 +204,23 @@ public class MainActivity extends Activity {
 		return locations;
 	}
 	
+	public static boolean isCrucialArea(double curLat, double curLon,ArrayList<Location> allPts,int radius) {
+		int numLocalCases = 0;
+		int thresh = 25; // number of bearable cases in an area
+		Location curLoc = new Location("");
+		curLoc.setLatitude(curLat);
+		curLoc.setLongitude(curLon);
+		for (Location l : allPts) {
+			float dist = curLoc.distanceTo(l);
+			if (dist < radius) {
+				numLocalCases++;
+			}
+		}
+		if (numLocalCases > thresh) {
+			return true;
+		}
+		return false;				
+	}
+
+	
 }
