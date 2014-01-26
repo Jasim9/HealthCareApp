@@ -3,6 +3,8 @@
 
     <string name="app_name">Health Care</string>
     <string name="dummy_button">Dummy Button</string>
+    <string name="map">Map</string>
+    <string name="hmap">Heat Map</string>
     <string name="dummy_content">HEALTH\nCARE</string>
 
 </resources>
